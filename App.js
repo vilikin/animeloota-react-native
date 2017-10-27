@@ -1,6 +1,7 @@
 import React from 'react';
 import {ScrollView, StatusBar, StyleSheet, Text, View} from 'react-native';
 import {Constants} from 'expo'
+import Anime from "./components/Anime";
 
 export default class App extends React.Component {
     state = {
@@ -9,36 +10,43 @@ export default class App extends React.Component {
                 name: "Naruto",
                 description: "Valtsun suosikki anime",
                 picture: "https://i.pinimg.com/originals/52/5e/81/525e8147f8b2e37f8fc1b662dbf7722f.png",
-                episode: 1,
-                season: 1
+                episode: 1
             },
             {
                 name: "Boruto",
                 description: "Valtsun suosikki anime",
                 picture: "https://i.pinimg.com/originals/52/5e/81/525e8147f8b2e37f8fc1b662dbf7722f.png",
-                episode: 1,
-                season: 1
+                episode: 1
             },
             {
                 name: "Umaru",
                 description: "Valtsun suosikki anime",
                 picture: "https://i.pinimg.com/originals/52/5e/81/525e8147f8b2e37f8fc1b662dbf7722f.png",
-                episode: 1,
-                season: 1
+                episode: 1
             },
             {
                 name: "Sword Art Online",
                 description: "Valtsun suosikki anime",
                 picture: "https://i.pinimg.com/originals/52/5e/81/525e8147f8b2e37f8fc1b662dbf7722f.png",
-                episode: 1,
-                season: 1
+                episode: 1
             },
             {
                 name: "Attack on Titan",
                 description: "Valtsun suosikki anime",
                 picture: "https://i.pinimg.com/originals/52/5e/81/525e8147f8b2e37f8fc1b662dbf7722f.png",
-                episode: 1,
-                season: 1
+                episode: 1
+            },
+            {
+                name: "Sword Art Online",
+                description: "Valtsun suosikki anime",
+                picture: "https://i.pinimg.com/originals/52/5e/81/525e8147f8b2e37f8fc1b662dbf7722f.png",
+                episode: 1
+            },
+            {
+                name: "Attack on Titan",
+                description: "Valtsun suosikki anime",
+                picture: "https://i.pinimg.com/originals/52/5e/81/525e8147f8b2e37f8fc1b662dbf7722f.png",
+                episode: 1
             }
         ]
     };
@@ -52,8 +60,8 @@ export default class App extends React.Component {
 
                 <ScrollView style={styles.list}>
                     {
-                        this.state.animes.map(anime => (
-                            <Anime {...anime}/>
+                        this.state.animes.map((anime, i) => (
+                            <Anime key={i} {...anime}/>
                         ))
                     }
                 </ScrollView>
